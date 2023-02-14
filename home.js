@@ -8,9 +8,9 @@ const iconMenu = document.getElementById('iconMenu');
 const isCheckLogin = 0;
 
 
-function loginAccount() {
-    redirectLoginPage();
-}
+// function loginAccount() {
+//     redirectLoginPage();
+// }
 
 // Tab UI
 
@@ -50,8 +50,8 @@ iconMenu.onclick = function() {
 
 // redirect
 
-function redirectLoginPage() {
-    setTimeout(function() {
-        window.location = "http://127.0.0.1:5500/signIn.html"
-    },1000)
-}
+// function redirectLoginPage() {
+//     setTimeout(function() {
+//         window.location = "signIn.html"
+//     },1000)
+// }
