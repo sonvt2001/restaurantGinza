@@ -423,7 +423,7 @@ header {
 
 @media ( min-width: 740px ) and ( max-width: 1023px ) {
     header {
-        background-image: url("/assets/img/Home.jpg");
+        background-image: url("assets/img/Home.jpg");
         height: 60vh;
         width: 100%;
      }
@@ -665,7 +665,7 @@ header {
 
 @media (max-width: 739px) {
     header {
-        background-image: url("/assets/img/Home.jpg");
+        background-image: url("assets/img/Home.jpg");
         height: 50vh;
         width: 100%;
      }
@@ -690,7 +690,7 @@ header {
 
     .nav__list--responsive {
         display: block;
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         position: absolute;
         left: 0;
         margin: 10px 0 0 20px;

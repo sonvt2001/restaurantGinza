@@ -82,7 +82,9 @@ function registerSubmit(e) {
         toastSuccess();
         var userFromJSON = JSON.stringify(users);
         localStorage.setItem("users", userFromJSON);
-        setTimeout('redirectLogin()', 3000)
+        setTimeout(function(){
+            window.location.href = "signIn.html"
+        },3000)
     }
 }
 
@@ -103,7 +105,9 @@ function loginSubmit (e) {
     }
     else if( userFromString.email == email && userFromString.password == password) {
         toastLogin()
-        setTimeout('redirectHome()',2000)
+        setTimeout(function(){
+            window.location.href = "index.html"
+        },2000)
     }
     else{
         toastCheckInfoLogin()
@@ -122,15 +126,5 @@ function showUserName() {
         x.innerText = "Login";
         i.style.display = "none";
     }
-}
-
-// redirect
-
-function redirectHome() {
-    window.location = "http://127.0.0.1:5500/index.html"
-}
-
-function redirectLogin() {
-    window.location = "http://127.0.0.1:5500/signIn.html"
 }
 
