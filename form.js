@@ -129,5 +129,5 @@ function showUserName() {
 }
 
 function register() {
-    window.location.href = "signUp.html"
+    window.location.href = "signUp.html";
 }
