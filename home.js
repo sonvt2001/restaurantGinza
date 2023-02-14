@@ -8,9 +8,9 @@ const iconMenu = document.getElementById('iconMenu');
 const isCheckLogin = 0;
 
 
-// function loginAccount() {
-//     redirectLoginPage();
-// }
+function loginAccount() {
+    window.location.href = "signIn.html"
+}
 
 // Tab UI
 

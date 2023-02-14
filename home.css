@@ -677,7 +677,6 @@ header {
 
     .btn__login {
         font-size: 1rem;
-        margin-right: 80px;
         display: contents;
     }
 
@@ -695,6 +694,10 @@ header {
         left: 0;
         margin: 10px 0 0 20px;
         z-index: 2;
+    }
+
+    .nav__list--responsive:hover {
+        opacity: 0.8;
     }
 
     .nav__list {
