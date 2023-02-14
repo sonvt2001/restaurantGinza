@@ -52,6 +52,6 @@ iconMenu.onclick = function() {
 
 function redirectLoginPage() {
     setTimeout(function() {
-        window.location = "http://127.0.0.1:5500/page/signIn.html"
+        window.location = "http://127.0.0.1:5500/signIn.html"
     },1000)
 }
