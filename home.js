@@ -45,13 +45,3 @@ iconMenu.onclick = function() {
     }
 }
 
-    // this.classList.toggle('fa-xmark')
-
-
-// redirect
-
-// function redirectLoginPage() {
-//     setTimeout(function() {
-//         window.location = "signIn.html"
-//     },1000)
-// }
