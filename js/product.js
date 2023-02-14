@@ -6,7 +6,7 @@ const products = [
         name: "Vegetable Pho",
         price : "$8",
         desc: "Ginza Pho is based on a family recipe that's been handed down for generations. It's a spicy, light and aromatic noodle soup.",
-        path: "./img/img-dishes1.jpg"
+        path: "assets/img/img-dishes1.jpg"
     },
     {
         id_category: "",
@@ -14,7 +14,7 @@ const products = [
         name: "Tonkatsu Ramen",
         price : "$7",
         desc: "Our bespoke ramen comes with handmade noodles, a wide array of toppings to choose from and homemade broth.",
-        path: "./img/img-dishes2.jpg"
+        path: "assets/img/img-dishes2.jpg"
     },
 
 ]
