@@ -134,9 +134,3 @@ function redirectLogin() {
     window.location = "http://127.0.0.1:5500/signIn.html"
 }
 
-
-function redirectRegister() {
-    setTimeout(function() {
-        window.location = "http://127.0.0.1:5500/signUp.html"
-    },1000)
-}
