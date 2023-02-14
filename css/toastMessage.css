@@ -1,0 +1,173 @@
+#toast {
+    position: fixed;
+    right: 100px;
+    top: 32px;
+    z-index: 999999;
+}
+
+.toast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    min-width: 45vh;
+    max-width: 55vh;
+    border-left: 5px solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* animation: toastInLeft 1s ease-in , fadeOut linear 1s 3s forwards; */
+}
+
+@keyframes toastInLeft {
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to{
+        opacity: 0;
+    }
+}
+
+.toast__icon {
+    font-size: 1.3rem;
+}
+
+.toast__title {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.toast__message {
+    font-size: 1rem;
+    color: #666;
+}
+
+.toast--success {
+    color: #47d864;
+}
+
+.toast--success .toast__icon {
+    color: #47d864;
+}
+
+.toast--success .toast__title { 
+    color:#47d864
+}
+
+.toast--error {
+    color: orangered;
+}
+
+.toast--error .toast__icon {
+    color: orangered;
+}
+
+.toast--error .toast__title { 
+    color: orangered;
+}
+
+.toast--warn {
+    color: rgb(198, 198, 46);
+}
+
+.toast--warn .toast__icon {
+    color: rgb(198, 198, 46);
+
+}
+
+.toast--warn .toast__title { 
+    color: rgb(198, 198, 46);
+
+}
+
+
+/* Responsive */
+
+/* Tablet */
+
+@media ( min-width: 741px ) and ( max-width: 1023px ) {
+    #toast {
+        position: fixed;
+        top: 52px;
+        right: 132px;
+        z-index: 999999;
+    }
+
+    .toast {
+        border-left: 10px solid;
+        box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.8);
+        animation: toastInTop 1s ease-in , fadeOut linear 1s 3s forwards;
+    }
+
+    .toast__icon {
+        font-size: 3rem;
+    }
+
+    .toast__title {
+        font-size: 2.5rem;
+    }
+
+    .toast__message {
+        font-size: 1.6rem;
+    }
+
+    @keyframes toastInTop {
+        from{
+            transform: translateY(calc(-100% - 50px ));
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+        }
+    }
+}
+
+/* Mobile */ 
+
+@media ( max-width: 739px ) { 
+    #toast {
+        position: fixed;
+        right: 0;
+        top: 1px;
+        left: 0;
+        z-index: 999999;
+    }
+
+    .toast {
+        animation: toastInMiddle 1s ease-in , fadeOut linear 1s 3s forwards;
+    }
+
+    @keyframes toastInMiddle {
+        from{
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+        }
+    }
+}

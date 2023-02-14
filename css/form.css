@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Vibur', cursive;
+    font-family: 'Abel', sans-serif;
+    opacity: .95;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6.5% auto;
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    width: 55vh;
+    height: auto;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    font-size: 1rem;
+    margin: 5% 0 10% 0;
+}
+
+.back {
+    width: 0;
+    height: 0;
+}
+
+.back > i {
+    font-size: 1rem;
+    color: #666;
+    transform: translateX(-140px);
+}
+
+.back > i:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.form__group { 
+    display: flex;
+    background: #fff;
+    width: 40vh;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+
+.form__control {
+    outline: none;
+    border: none;
+    transition: 0.2s linear;
+}
+
+
+.form__control:hover {
+    transform: translateX(-2px);
+}
+
+.form__icon {
+    color: #666;
+    padding-right: 20px;
+    font-size: 1.5rem;
+}
+
+.icon__eye {
+    color: #666;
+    font-size: 0.8rem;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.form__message { 
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.form__submit {
+    font-size: 0.8rem;
+    color: #666;
+    padding: 10px;
+    width: 300px;
+    margin: 50px 0 30px 0;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s linear;
+    cursor: pointer;
+    line-height: 1.6;
+    background-color: #a8edea;
+}
+
+.form__submit:hover {
+    transform: translateY(5px);
+    background-color: #47d864;
+    color: #fff;
+}
+
+.other {
+    display: flex;
+    margin: 30px;
+}
+
+.btn__forgot {
+    background-color: transparent;
+    max-width: 100px;
+    margin-right: 50px;
+}
+
+.btn__signIn {
+    background-color: #a8edea;
+    padding: 14px;
+    border-radius: 5px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+
+    display: inline-block;
+
+    transition: all 0.3s linear;
+}
+
+.btn:hover {
+    transform: translateY(5px);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btn__signIn:hover {
+    background-color: #47d864;
+    color: #fff;
+}
+
+/* Resposive */
+
+/* Tablet */
+
+@media ( min-width: 740px ) and ( max-width: 1023px ) {
+
+    .form {
+        margin: 20% auto;
+        min-height: 70vh;
+    }
+
+    header > h2 {
+        font-size: 3rem;
+        margin-bottom: -20px;
+    }
+
+    .back {
+        width: 0;
+        height: 0;
+    }
+
+    .back > i {
+        font-size: 1.8rem;
+        margin: 10px;
+    }
+
+    .form__group {
+        height: 6vh;
+        margin-top: 40px;
+    }
+
+    .form__icon {
+        font-size: 2.5rem;
+    }
+
+    .form__control {
+        font-size: 1.45rem;
+        width: 100%;
+    }
+
+    .icon__eye {
+        font-size: 1.5rem;
+    }
+
+    .form__message {
+        font-size: 1.3rem;
+    }
+
+    .form__submit {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        width: 100%;
+        height: 6.5vh;
+    }
+
+    .other {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .btn {
+        font-size: 1.7rem;
+    }
+
+    .btn__signIn {
+        font-size: 1.8rem;
+        padding: 20px 30px;
+    }
+
+
+}
+
+/* Mobile */
+@media ( max-width: 739px) {
+    .form {
+       margin: 0;
+       padding: 0;
+       width: 100%;
+       height: 100vh;
+       border-radius: 0;
+    }
+
+    .back {
+        width: 0;
+
+    }
+
+    .back > i{
+        margin-left: 50px;
+    }
+
+    .back > i:hover {
+        color: #000;
+    }
+
+    header > h2 {
+        font-size: 1.8rem;
+        color: #666;
+    }
+
+    .form__group {
+        width: 100%;
+    }
+
+    .form__icon {
+        font-size: 1.8rem;
+    }
+
+    .form__control {
+        padding-left: 6px;
+        font-size: 0.9rem;
+    }
+
+    .form__message {
+        font-size: 0.9rem;
+    }
+
+    .icon__eye {
+       font-size: 1rem;
+    }
+
+    .form__submit {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+    }
+    
+    .btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
