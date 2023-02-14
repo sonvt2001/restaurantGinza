@@ -423,7 +423,7 @@ header {
 
 @media ( min-width: 740px ) and ( max-width: 1023px ) {
     header {
-        background-image: url("/img/Home.jpg");
+        background-image: url("/assets/img/Home.jpg");
         height: 60vh;
         width: 100%;
      }
@@ -665,7 +665,7 @@ header {
 
 @media (max-width: 739px) {
     header {
-        background-image: url("/img/Home.jpg");
+        background-image: url("/assets/img/Home.jpg");
         height: 50vh;
         width: 100%;
      }
