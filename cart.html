@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h3>Bag Cart</h3>
+        </div>
+
+        <div class="group__nav">
+            <button onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+            <span class="totalQuantyProductInCart">You have ... Item</span>
+        </div>
+
+        <div class="container">
+                <div class="thumails row">
+                    <div class="col-xl-3 img__product">
+                        <img src="./assets/img/sushi1.jpg" alt="">
+                    </div>
+                    <div class="col-xl-6 group__info">
+                        <div class="name__product">Philadelphia Roll</div>
+                        <div class="desc__product">A modern classic. Sushi roll with salmon, avocado, cream cheese, and surimi sticks.</div>
+                        <div class="price__product">$8</div> 
+                    </div>
+                    <div class="col-xl-2 quality">
+                        <input type="number" value="1" name="quantity" id="quantity" min="1" >
+                    </div>
+                    <div class="col-xl-1 remove">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>

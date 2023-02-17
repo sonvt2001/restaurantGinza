@@ -5,11 +5,23 @@ const listMenu = document.querySelector('.nav__list--responsive');
 const listMenuItem = document.querySelector('.nav__list');
 const iconMenu = document.getElementById('iconMenu');
 
-const isCheckLogin = 0;
-
 
 function loginAccount() {
-    window.location.href = "signIn.html"
+    setTimeout(function () {
+        window.location.href = "signIn.html"
+    },500)
+}
+
+function switchMenuPage() {
+    setTimeout(function () {
+        window.location.href = "menu.html"
+    },500)
+}
+
+function shopCart() {
+    setTimeout(function () {
+        window.location.href = "cart.html"
+    },500)
 }
 
 // Tab UI
@@ -37,11 +49,15 @@ iconMenu.onclick = function() {
     if ( listMenuItem.style.display === "none" ) {
         listMenuItem.style.display = "block"
         this.classList.remove('fa-list');
-        this.classList.add('fa-xmark');
+        this.classList.add('fa-arrow-left');
+        this.style.color = "#333"
+        this.style.fontSize = "1.5rem"
     }else {
         listMenuItem.style.display = "none";
-        this.classList.remove('fa-xmark');
+        this.classList.remove('fa-arrow-left');
         this.classList.add('fa-list');
+        this.style.color = "#fff"
+        this.style.fontSize = "2rem"
     }
 }
 

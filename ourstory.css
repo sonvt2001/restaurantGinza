@@ -1,0 +1,72 @@
+header {
+    background-image: url("assets/img/ourstory.jpg");
+   background-size:cover;
+   background-repeat: no-repeat;
+   background-position: 30%;
+   height: 80vh;
+}
+
+body {
+    font-family :'Times New Roman', Times, serif;
+}
+
+.name__restaurant {
+    font-size: 3rem;
+}
+
+.name__menu {
+    font-size: 5rem;
+}
+
+.ourstory {
+    padding: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ourstory__img > img {
+    width: 600px;
+}
+
+.ourstory__groupText {
+   display: flex;
+   flex-direction: column;
+   max-width: 500px;
+   margin: auto 0;
+}
+
+.ourstory__title {
+    font-size: 3.5rem;
+    max-width: 300px;
+    margin-bottom: 50px;
+}
+
+.ourstory__text {
+    font-size: 1.2rem;
+    max-width: 350px;
+}
+
+.ourstory2 {
+    display: flex;
+    padding: 20px 150px 150px 150px;
+}
+
+.ourstory2__img > img {
+    width: 450px;
+}
+
+.ourstory2__groupText {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+.ourstory2__text1 {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.ourstory2__text2 {
+    font-size: 1.2rem;
+}

@@ -4,8 +4,33 @@
     box-sizing: border-box;
 }
 
-body{
-    
+body {
+    font-family :'Times New Roman', Times, serif;
+}
+
+.btn__login.not__activePC {
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.btn__login--mobile.not__active {
+    cursor: default;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.btn__login--mobile {
+    display: none;
+}
+
+hr {
+    size: 2px;
+    background-color: #f6f5f5;
+    background-color: #f6f5f5;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 2px;
 }
 
 
@@ -70,6 +95,10 @@ header {
     color: red;
     cursor: pointer;
     animation: inRight 2s linear infinite;
+}
+
+.nav__list--login {
+    display: none;
 }
 
 
@@ -174,7 +203,12 @@ header {
 }
 
 .popular__menu {
-  margin: 0 auto;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .popular__title {
@@ -185,12 +219,16 @@ header {
 }
 
 .popular__img {
-   width: 100%;
+   width: 80%;
    height: 65%;
 }
 
 .popular__name {
     font-size: 1.5rem;
+}
+
+.popular__group {
+   width: 80%;
 }
 
 .group__title{
@@ -416,6 +454,37 @@ header {
    display: none;
  }
 
+
+ /* Cart */
+
+ .cart {
+    position: fixed;
+    font-size: 2.5rem;
+    z-index: 10;
+    right: 30px;
+    bottom: 50px;
+    background-color: darkseagreen;
+    padding: 15px 25px;
+    border-radius: 50%;
+    color: #fff;
+ }
+
+ .cart:hover {
+    opacity: 0.8;
+    cursor: pointer;
+ }
+
+ .quantityCart {
+    position: fixed;
+    font-size: 1rem;
+    z-index: 11;
+    right: 30px;
+    bottom: 120px;
+    background-color: red;
+    padding: 5px 12px;
+    border-radius: 30px;
+ }
+
 /* Responsive */
 
 
@@ -451,7 +520,7 @@ header {
         font-size: 3rem;
         margin: 20px 30px;
         position: relative;
-        z-index: 2;
+
     }
 
     .nav__list {
@@ -687,13 +756,21 @@ header {
         font-size: 1.2rem;
     }
 
+    .btn__form {
+        display: none;
+    }
+
+    .nav__list {
+        z-index: 12;
+    }
+
     .nav__list--responsive {
         display: block;
-        font-size: 1.8rem;
+        font-size: 2rem;
         position: absolute;
-        left: 0;
-        margin: 10px 0 0 20px;
-        z-index: 2;
+        right: 0;
+        margin: 10px 20px 0 0;
+        z-index: 20;
     }
 
     .nav__list--responsive:hover {
@@ -704,7 +781,7 @@ header {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: #999999;
+        background-color: #f6f5f5;
         width: 100%;
         margin: 0;
         height: 100%;
@@ -712,13 +789,48 @@ header {
         display: none;
     }
 
-    .nav__list--item:first-child {
+    /* .nav__list--item:first-child {
         margin-top: 100px;
+    } */
+
+    .btn__login--mobile {
+        display: block;
+        padding: 5px 10px;
+        font-size: 1rem;
+        border: none;
+        background-color: #999;
+        color: #fff;
+        border-radius: 10px;
+        width: auto;
+        list-style: none;
+    }
+
+    .btn__login--mobile:hover {
+        background-color: #00CC99;
+    }
+
+    .nav__list--login {
+        margin-top: 80px;
+        margin-bottom: 50px;
+        display: flex;
+    }
+
+    #logOut--mobile {
+        margin-left: 20px;
     }
 
     .nav__list--item {
+        color: #000;
         font-size: 1.2rem;
         margin: 20px 0 20px 30px;
+        padding: 5px 20px;
+    }
+
+    .nav__list--item:hover {
+        background-color: #999;
+        color: #fff;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
 
     .name__restaurant {

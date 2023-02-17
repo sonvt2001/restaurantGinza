@@ -118,15 +118,29 @@ function loginSubmit (e) {
 function showUserName() {
     var getUserName = JSON.parse(localStorage.getItem("users")).username;
     var x = document.getElementById("btnLogin");
+    var m = document.getElementById("btnLogin--mobile");
     x.innerText = "Hello, " + getUserName;
+    m.innerText = getUserName;
     var i = document.getElementById("logOut");
+    var iM = document.getElementById("logOut--mobile");
     i.style.display = "block";
+    iM.style.display = "block";
+    m.classList.add("not__active");
+    x.classList.add("not__activePC");
 
     i.onclick = function () {
         x.innerText = "Login";
         i.style.display = "none";
+        x.classList.remove("not__activePC")
+    }
+
+    iM.onclick = function () {
+        m.innerText = "Login";
+        iM.style.display = "none";
+        m.classList.remove("not__active")
     }
 }
+
 
 function register() {
     window.location.href = "signUp.html";
