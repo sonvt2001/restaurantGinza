@@ -7,14 +7,14 @@ const startersProducts = [
     {
         id_product: randomId(),
         name: "Dumplings",
-        price : "$8",
+        price : "8",
         desc: "Choose from vegetable, chicken or pork filling. Served with dipping sauce and garnish.",
         path: "assets/img/starters1.jpg"
     },
     {
         id_product: randomId(),
         name: "Chef's Special",
-        price : "$8",
+        price : "8",
         desc: "Avocado, lime, salmon, mushrooms and garnish served with pickled ginger and spring onions.",
         path: "assets/img/starters2.jpg"
     },
@@ -165,7 +165,7 @@ function render() {
         })
     dishesSushis.innerHTML = htmlsSushis.join('');
 
-        const htmlsDrinks = sushiProducts.map(productDrink => {
+        const htmlsDrinks = drinksProducts.map(productDrink => {
             return `<div class="col-xl-5 col-md-12 col-sm-12 popular__menu">
             <div class="col-md-8 col-sm-12 popular__group">
                 <div class="group__title">

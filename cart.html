@@ -17,26 +17,28 @@
 
         <div class="group__nav">
             <button onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></button>
-            <span class="totalQuantyProductInCart">You have ... Item</span>
+            <span>
+                You have a 
+                <span class="quantityCart"></span>
+                <span class="verbItem">0 item in cart.</span>
+            </span>
         </div>
 
         <div class="container">
-                <div class="thumails row">
-                    <div class="col-xl-3 img__product">
-                        <img src="./assets/img/sushi1.jpg" alt="">
-                    </div>
-                    <div class="col-xl-6 group__info">
-                        <div class="name__product">Philadelphia Roll</div>
-                        <div class="desc__product">A modern classic. Sushi roll with salmon, avocado, cream cheese, and surimi sticks.</div>
-                        <div class="price__product">$8</div> 
-                    </div>
-                    <div class="col-xl-2 quality">
-                        <input type="number" value="1" name="quantity" id="quantity" min="1" >
-                    </div>
-                    <div class="col-xl-1 remove">
-                        <i class="fa-solid fa-trash"></i>
-                    </div>
-                </div>
+            <div class="row title__cart">
+                <div class="title__1 col-xl-5">Product</div>
+                <div class="title__2 col-xl-2">Price</div>
+                <div class="title__3 col-xl-2">Quantity</div>
+                <div class="title__4 col-xl-1">Total</div>
+            </div>
+            <div id="cartItem"></div>   
+        </div>
+
+        <div class="totalCartProduct">
+            <div class="totalCost">
+                <h5>Total: </h5><span id="totalPrice"></span>
+            </div>
+            <div class="btn btn-dark btnOrder">Order</div>
         </div>
     </div>
     <script src="cart.js"></script>
