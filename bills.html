@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="bills.css">
+</head>
+
+<body>
+    <div id="bill" class="bill">
+        <div class="container">
+            <i onclick="history.back()" class="close__bill fa-solid fa-arrow-left"></i>
+            <h1 class="title__bill">Bill Detail</h1>
+            <hr/>
+            <h4 class="title__delivery"><i class="fa-solid fa-location-dot"></i>Delivery address</h4>
+            <div class="group__userInfo">
+                <input type="text" name="nameUser" id="nameUser" value="Vũ Trường Sơn">
+                <input type="text" name="phoneUser" id="phoneUser" value="0962010635">
+                <input type="text" name="addressUser" id="addressUser" value="Bình Dương">
+            </div>
+           
+
+            <h4 class="title__product"><i class="fa-solid fa-gift"></i>Product</h4>
+
+            <div class="product__info">
+                <div class="container">
+                    <div class="row title__cart">
+                        <div class="title__1 col-xl-5"></div>
+                        <div class="title__2 col-xl-1">Price</div>
+                        <div class="title__3 col-xl-2">Quantity</div>
+                        <div class="title__4 col-xl-1">Total</div>
+                    </div>
+                </div>
+                <div class="thumails row">
+                    <div class="col-xl-2 img__product">
+                        <img src="./assets/img/img-dishes1.jpg" alt="">
+                    </div>
+                    <div class="col-xl-4 group__info">
+                        <div class="name__product">Vegatable Pho</div>
+                        <div class="price__product">$8</div> 
+                    </div>
+                    <div class="col-xl-3 quality">
+                        <span class="quantity">3</span>
+                    </div>
+                    <div class="col-xl-1 totalPriceItem">
+                        <span class="priceItemTotal">$24</span>
+                    </div>
+                </div>
+
+                <div class="thumails row">
+                    <div class="col-xl-2 img__product">
+                        <img src="./assets/img/img-dishes1.jpg" alt="">
+                    </div>
+                    <div class="col-xl-4 group__info">
+                        <div class="name__product">Vegatable Pho</div>
+                        <div class="price__product">$8</div> 
+                    </div>
+                    <div class="col-xl-3 quality">
+                        <span class="quantity">3</span>
+                    </div>
+                    <div class="col-xl-1 totalPriceItem">
+                        <span class="priceItemTotal">$24</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <h4 class="title__order"><i class="fa-solid fa-money-bill"></i>Payment</h4>
+            <div class="pay">
+                <div class="payShip">
+                    <h5>Ship</h5>
+                    <span>$5</span>
+                </div>
+                <div class="totalPricePay">
+                    <h5>Total payment</h5>
+                    <span>$53</span>
+                </div>
+
+                <div onclick="paymentBill()" class="btn__pay btn btn-outline-success">Payment</div>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+    <script src="bills.js"></script>
+</body>

@@ -3,6 +3,7 @@ const numberCartInBag = document.querySelector('.quantityCart')
 const verbItem = document.querySelector('.verbItem');
 const cartItems = document.querySelector('#cartItem');
 const totalPriceCart = document.querySelector('#totalPrice');
+const productContainer = document.querySelector('#cartItem');
 
 
 let products = [
@@ -12,7 +13,8 @@ let products = [
         desc: "Choose from vegetable, chicken or pork filling. Served with dipping sauce and garnish.",
         path: "assets/img/starters1.jpg",
         inCart: 0,
-        tag: "dumplings"
+        tag: "dumplings",
+        totalPrice: 8
     },
     {
         name: "Chef's Special",
@@ -20,7 +22,9 @@ let products = [
         desc: "Avocado, lime, salmon, mushrooms and garnish served with pickled ginger and spring onions.",
         path: "assets/img/starters2.jpg",
         inCart: 0,
-        tag: "chef'sSpecial"
+        tag: "chef'sSpecial",
+        totalPrice: 8
+
     },
     {
         name: "Vegetable Pho",
@@ -28,7 +32,8 @@ let products = [
         desc: "Ginza Pho is based on a family recipe that's been handed down for generations. It's a spicy, light and aromatic noodle soup.",
         path: "assets/img/img-dishes1.jpg",
         inCart: 0,
-        tag:"vegetablePho"
+        tag:"vegetablePho",
+        totalPrice: 8
     },
     {
         name: "Tonkatsu Ramen",
@@ -36,7 +41,8 @@ let products = [
         desc: "Our bespoke ramen comes with handmade noodles, a wide array of toppings to choose from and homemade broth.",
         path: "assets/img/img-dishes2.jpg",
         inCart: 0,
-        tag:"tonkatsuRamen"
+        tag:"tonkatsuRamen",
+        totalPrice: 7
     },
     {
         name: "Teriyaki Donburi",
@@ -44,7 +50,8 @@ let products = [
         desc: "A crown pleaser, our homemade teriyaki sauce served with chicken or tofu and greens.",
         path: "assets/img/bowls2.jpg",
         inCart: 0,
-        tag: "teriyakiDonburi"
+        tag: "teriyakiDonburi",
+        totalPrice: 10
     },
     {
         name: "Vermicelli Donburi",
@@ -52,7 +59,8 @@ let products = [
         desc: "Modern fusion dish combining rice noodles with a classic rice bowl. Vegetarian option available.",
         path: "assets/img/bowls1.jpg",
         inCart: 0,
-        tag:"vermicelliDonburi"
+        tag:"vermicelliDonburi",
+        totalPrice: 9
     },
     {
         name: "Philadelphia Roll",
@@ -60,7 +68,8 @@ let products = [
         desc: "A modern classic. Sushi roll with salmon, avocado, cream cheese, and surimi sticks.",
         path: "assets/img/sushi1.jpg",
         inCart: 0,
-        tag:"philadelphiaRoll"
+        tag:"philadelphiaRoll",
+        totalPrice: 8
     },
     {
         name: "San Francisco Roll",
@@ -68,7 +77,8 @@ let products = [
         desc: "Inside out roll with surimi, tuna, cream cheese, sesame seeds and fried onions.",
         path: "assets/img/sushi2.jpg",
         inCart: 0,
-        tag:"sanFranciscoRoll"
+        tag:"sanFranciscoRoll",
+        totalPrice: 7
     },
     {
         name: "Dragon Roll",
@@ -76,7 +86,8 @@ let products = [
         desc: "Inside out roll with fried king prawns, avocado, Japanese omelet and cream cheese.",
         path: "assets/img/sushi3.jpg",
         inCart: 0,
-        tag:"dragonRoll"
+        tag:"dragonRoll",
+        totalPrice: 9
     },
     {
         name: "Nigiri Plate",
@@ -84,7 +95,8 @@ let products = [
         desc: "A selection of our finest nigiri: choose from salmon, tuna, tilapia, surimi, prawns and vegetarian options.",
         path: "assets/img/sushi4.jpg",
         inCart: 0,
-        tag:"nigiriPlate"
+        tag:"nigiriPlate",
+        totalPrice: 15
     },
     {
         name: "Sapporo Beer",
@@ -92,7 +104,8 @@ let products = [
         desc: "Premium Japanese beer.",
         path: "assets/img/drink1.jpg",
         inCart: 0,
-        tag:"sapporoBeer"
+        tag:"sapporoBeer",
+        totalPrice: 8.50
     },
     {
         name: "Kokuryu Sake",
@@ -100,7 +113,8 @@ let products = [
         desc: "Daidinjo sake with a mild aroma and subtle floral notes.",
         path: "assets/img/drink2.jpg",
         inCart: 0,
-        tag: "kokuryuSake"
+        tag: "kokuryuSake",
+        totalPrice: 8.50
     },
     {
         name: "Tozai Sake",
@@ -108,7 +122,8 @@ let products = [
         desc: "Smooth, fruity, and cloudy sake, perfect for pairing.",
         path: "assets/img/drink3.jpg",
         inCart: 0,
-        tag: "tozaiSake"
+        tag: "tozaiSake",
+        totalPrice: 31.50
     },
     {
         name: "Juyodai Sake",
@@ -116,7 +131,8 @@ let products = [
         desc: "An easy-drinking premium sake with a rich flavor.",
         path: "assets/img/drink4.jpg",
         inCart: 0,
-        tag: "juyodaiSake"
+        tag: "juyodaiSake",
+        totalPrice: 35.50
     }
 ]
 
@@ -136,8 +152,13 @@ function loadNumberCart() {
         if(productNumbers > 1) {
             verbItem.textContent = ' items in cart.'
         }
-        else {
+        else if ( productNumbers < 1) {
             verbItem.textContent = ' item in cart.'
+            productContainer.innerHTML += `
+            <div class="img__emtyCart">
+                <img class="col-xl-12" src="./assets/img/cartemty.png" alt="Image Cart is Empty" />
+            </div>
+        `
         }
     }
 }
@@ -203,11 +224,11 @@ function totalPrice(product) {
     
 }
 
+
 function renderItemCartInBag() {
     let getItem = localStorage.getItem("productInCart")
     getItem = JSON.parse(getItem)
 
-    let productContainer = document.querySelector('#cartItem');
     if(getItem && productContainer) {
         Object.values(getItem).map( item => {
             productContainer.innerHTML += `
@@ -225,14 +246,21 @@ function renderItemCartInBag() {
                         <i class="minusItem fa-solid fa-minus"></i>
                     </div>
                     <div class="col-xl-1 totalPriceItem">
-                        <span class="priceItemTotal">$${item.price}</span>
+                        <span class="priceItemTotal">$${item.totalPrice}</span>
                     </div>
                     <div class="col-xl-1 remove">
-                        <i class="fa-solid fa-trash"></i>
+                        <i onclick="removeItemInCart()" id="removeItem" class="fa-solid fa-trash"></i>
                     </div>
                 </div>
             `
         })
+    }
+    else {
+        productContainer.innerHTML += `
+            <div class="img__emtyCart">
+                <img class="col-xl-12" src="./assets/img/cartemty.png" alt="Image Cart is Empty" />
+            </div>
+        `
     }
 }
 
@@ -242,6 +270,8 @@ const plusItem = document.querySelectorAll(".plusItem");
 const minusItem = document.querySelectorAll(".minusItem");
 const priceItemTotal = document.querySelectorAll('.priceItemTotal');
 const quantityItem = document.querySelectorAll('.quantity');
+const removeItem = document.querySelectorAll('#removeItem');
+
 
 let inCartQuantity = localStorage.getItem("productInCart");
 inCartQuantity = JSON.parse(inCartQuantity);
@@ -249,6 +279,42 @@ inCartQuantity = JSON.parse(inCartQuantity);
 let getPrice = localStorage.getItem("totalPrice");
 getPrice = JSON.parse(getPrice);
 
+let getCartNumber = localStorage.getItem("cartNumbers");
+getCartNumber = JSON.parse(getCartNumber);
+
+function minusItemInCart() {
+    for ( let j = 0 ; j < minusItem.length ; j++ ) {
+        minusItem[j].onclick = function () {
+            Object.values(inCartQuantity).forEach((quantity1, index1) => {
+                if( index1 === j) {
+                   quantityItem.forEach((num1, numIndex1) => {
+                        if( numIndex1 === index1){
+                            num1.textContent = quantity1.inCart -= 1;
+                            inCartQuantity = {
+                                ...inCartQuantity,
+                                [quantity1.tag]: quantity1
+                            }
+                            inCartQuantity[quantity1.tag].inCart +1;
+                            inCartQuantity[quantity1.tag].totalPrice = inCartQuantity[quantity1.tag].price*inCartQuantity[quantity1.tag].inCart;
+                            localStorage.setItem("productInCart", JSON.stringify(inCartQuantity));
+
+                            if( inCartQuantity[quantity1.tag].inCart === 1 ) {
+                                minusItem[j].classList.add("disabled");
+                            }
+                        }
+                            priceItemTotal.forEach((price1, priceIndex1) => {
+                                if( priceIndex1 === index1) {
+                                    price1.textContent = "$" + inCartQuantity[quantity1.tag].price;
+                                    totalPriceCart.textContent = "$" + Math.abs(quantity1.price - getPrice);
+                                }
+                            })
+                            totalPriceMinus(quantity1)
+                })    
+                }
+            })
+        }
+    }
+}
 
 function plusItemInCart() {
     for ( let i = 0 ; i < plusItem.length ; i++ ) {
@@ -263,11 +329,12 @@ function plusItemInCart() {
                                 [quantity.tag]: quantity
                             }
                             inCartQuantity[quantity.tag].inCart +1;
+                            inCartQuantity[quantity.tag].totalPrice = inCartQuantity[quantity.tag].price*inCartQuantity[quantity.tag].inCart;
                             localStorage.setItem("productInCart", JSON.stringify(inCartQuantity));
                         }
                             priceItemTotal.forEach((price, priceIndex) => {
                                 if( priceIndex === index) {
-                                    price.textContent = "$" + inCartQuantity[quantity.tag].price*inCartQuantity[quantity.tag].inCart;
+                                    price.textContent = "$" +  inCartQuantity[quantity.tag].price;
                                     totalPriceCart.textContent = "$" + (quantity.price + getPrice); 
                                 }
                             })
@@ -279,6 +346,33 @@ function plusItemInCart() {
     }
 }
 
+
+function removeItemInCart() {
+    for ( let r = 0; r < removeItem.length; r++) {
+        Object.values(inCartQuantity).forEach((item, index) => {
+            if( r == index ) { 
+                removeItem[index].onclick = () => {
+                    Object.values(inCartQuantity).forEach((item2, index2) => {
+                        if ( index2 === index ) {
+                            if ( item2.tag == item.tag ) {
+                                delete inCartQuantity[item2.tag]
+                                 console.log(true);
+                                 totalPriceMinus(item2)
+                                 totalCartNumber()
+                                //  location.reload();
+                            }
+                        }
+                    })
+                        localStorage.setItem("productInCart", JSON.stringify(inCartQuantity));
+                }
+            }
+        })
+    }
+}
+
+removeItemInCart()
+
+
 function totalPricePlus(quantity) {
     localStorage.setItem("totalPrice", quantity.price + getPrice);
     location.reload();
@@ -289,40 +383,9 @@ function totalPriceMinus(quantity1) {
     location.reload();
 }
 
-function totalPriceItemPlus(quantity) {
-    
-}
-
-
-function minusItemInCart() {
-    for ( let j = 0 ; j < minusItem.length ; j++ ) {
-        minusItem[j].onclick = function () {
-            console.log(1234)
-            Object.values(inCartQuantity).forEach((quantity1, index1) => {
-                if( index1 === j) {
-                   quantityItem.forEach((num1, numIndex1) => {
-                        if( numIndex1 === index1){
-                            num1.textContent = quantity1.inCart -= 1;
-                            inCartQuantity = {
-                                ...inCartQuantity,
-                                [quantity1.tag]: quantity1
-                            }
-                            inCartQuantity[quantity1.tag].inCart +1;
-                            localStorage.setItem("productInCart", JSON.stringify(inCartQuantity));
-
-                        }
-                            priceItemTotal.forEach((price1, priceIndex1) => {
-                                if( priceIndex1 === index1) {
-                                    price1.textContent = "$" + quantity1.price*quantity1.inCart;
-                                    totalPriceCart.textContent = "$" + Math.abs(quantity1.price - getPrice);
-                                }
-                            })
-                            totalPriceMinus(quantity1)
-                })    
-                }
-            })
-        }
-    }
+function totalCartNumber() {
+    localStorage.setItem("cartNumbers", getCartNumber - 1);
+    location.reload();
 }
 
 function changQuantity(){
@@ -332,4 +395,10 @@ function changQuantity(){
 
 changQuantity()
 
+function pageBill() {
+    location.href ="bills.html";
+}
 
+function paymentBill() {
+    document.write("<h1>thanh toán thành công!!</h1>")
+}

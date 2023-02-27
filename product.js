@@ -142,7 +142,7 @@ function render() {
             </div>
             <div class="popular__info">
                 <div class="popular__text">${productStart.desc}</div>
-                <button class="btn__order">${productStart.price}</button>
+                <button class="btn__order">$${productStart.price}</button>
             </div>
         </div>
          </div>`

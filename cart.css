@@ -8,6 +8,11 @@ body {
     background-color: #f6f5f5;
 }
 
+.disabled {
+    cursor: no-drop;
+    pointer-events:none;
+}
+
 .main {
     background-color: #fff;
     width: 70%;
@@ -59,8 +64,13 @@ body {
 }
 
 .title__3 {
-    padding-left: 53px;
+    padding-left: 68px;
 }
+
+.img__emtyCart > img {
+    padding-bottom: 50px;
+}
+
 
 .thumails {
     border: 5px solid #f6f5f5;
@@ -176,9 +186,6 @@ body {
     margin-left: 10px;
 }
 
-.btnOrder {
-    
-}
 
 @keyframes rotate {
     from{
