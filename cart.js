@@ -399,6 +399,3 @@ function pageBill() {
     location.href ="bills.html";
 }
 
-function paymentBill() {
-    document.write("<h1>thanh toán thành công!!</h1>")
-}

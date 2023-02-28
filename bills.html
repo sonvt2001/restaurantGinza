@@ -17,12 +17,7 @@
             <h1 class="title__bill">Bill Detail</h1>
             <hr/>
             <h4 class="title__delivery"><i class="fa-solid fa-location-dot"></i>Delivery address</h4>
-            <div class="group__userInfo">
-                <input type="text" name="nameUser" id="nameUser" value="Vũ Trường Sơn">
-                <input type="text" name="phoneUser" id="phoneUser" value="0962010635">
-                <input type="text" name="addressUser" id="addressUser" value="Bình Dương">
-            </div>
-           
+            <div id="user" class="group__userInfo"> </div>
 
             <h4 class="title__product"><i class="fa-solid fa-gift"></i>Product</h4>
 
@@ -35,54 +30,14 @@
                         <div class="title__4 col-xl-1">Total</div>
                     </div>
                 </div>
-                <div class="thumails row">
-                    <div class="col-xl-2 img__product">
-                        <img src="./assets/img/img-dishes1.jpg" alt="">
-                    </div>
-                    <div class="col-xl-4 group__info">
-                        <div class="name__product">Vegatable Pho</div>
-                        <div class="price__product">$8</div> 
-                    </div>
-                    <div class="col-xl-3 quality">
-                        <span class="quantity">3</span>
-                    </div>
-                    <div class="col-xl-1 totalPriceItem">
-                        <span class="priceItemTotal">$24</span>
-                    </div>
-                </div>
-
-                <div class="thumails row">
-                    <div class="col-xl-2 img__product">
-                        <img src="./assets/img/img-dishes1.jpg" alt="">
-                    </div>
-                    <div class="col-xl-4 group__info">
-                        <div class="name__product">Vegatable Pho</div>
-                        <div class="price__product">$8</div> 
-                    </div>
-                    <div class="col-xl-3 quality">
-                        <span class="quantity">3</span>
-                    </div>
-                    <div class="col-xl-1 totalPriceItem">
-                        <span class="priceItemTotal">$24</span>
-                    </div>
-                </div>
+                <div id="productByUser"></div>
+                
             </div>
 
             <hr>
 
             <h4 class="title__order"><i class="fa-solid fa-money-bill"></i>Payment</h4>
-            <div class="pay">
-                <div class="payShip">
-                    <h5>Ship</h5>
-                    <span>$5</span>
-                </div>
-                <div class="totalPricePay">
-                    <h5>Total payment</h5>
-                    <span>$53</span>
-                </div>
-
-                <div onclick="paymentBill()" class="btn__pay btn btn-outline-success">Payment</div>
-            </div>
+            <div id="billTotal" class="pay"></div>
         </div>
     </div>
     <script src="cart.js"></script>

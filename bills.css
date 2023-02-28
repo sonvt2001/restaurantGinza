@@ -157,11 +157,15 @@
 }
 
 .totalPricePay > h5 {
-    margin-right: 110px;
+    flex-grow: 1;
 }
 
 .btn__pay {
     font-size: 1.2rem;
     margin-top: 20px;
     float: right;
+}
+
+.btnBackHome:hover {
+    color: #333;
 }
