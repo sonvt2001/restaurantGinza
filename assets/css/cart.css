@@ -46,6 +46,7 @@ body {
    opacity:1;
 }
 
+
 .totalQuanty {
     font-size: 1rem;
 }
@@ -73,6 +74,7 @@ body {
 
 
 .thumails {
+    display: flex;
     border: 5px solid #f6f5f5;
     padding: 10px 20px;
     border-radius: 10px;
@@ -91,6 +93,7 @@ body {
     width: 100%;
     height: 180px;
 }
+
 
 .group__info {
     display: flex;
@@ -195,3 +198,128 @@ body {
         transform: rotate(-10deg);
     }
 }
+
+.name__product--mobile {
+    display: none;
+}
+
+
+/* Responsive */
+
+@media (max-width: 739px) {
+    .main {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header > h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .group__nav {
+        display: flex;
+    }
+
+    .group__nav > button {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .group__nav > span {
+        display: none;
+    }
+
+    .title__1, .title__2, .title__3 {
+        display: none;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .img-product > img {
+        width: 20%;
+        height: 0;
+    }
+
+    .title__cart {
+        border-bottom: none;
+    }
+
+    .totalCost > h5 {
+        margin: 0;
+    } 
+
+    #totalPrice {
+        font-size: 1.5rem;
+    }
+
+    .thumails {
+       display: flex;
+    }
+
+
+    .img__product > img {
+       width: 110px;
+       height: 70%;
+       display: flex;
+       justify-content: center;
+        
+    }
+
+    .name__product,
+    .price__product {
+        font-size: 1.2rem;
+    }
+
+    .quality {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .quality > i {
+        font-size: 0.5rem;
+    }
+
+    .totalPriceItem {
+        display: none;
+    }
+
+    .img__emtyCart > img {
+        width: 100%;
+    }
+
+    .totalCartProduct {
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+    }
+
+    .name__product--mobile {
+        display: block;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+    }
+
+    .name__product {
+        display: none;
+    }
+
+    .price__product {
+        font-size: 1.1rem;
+    }
+
+    .price__product {
+       padding-left: 10px;
+    }
+
+    #removeItem {
+        font-size: 1.3rem;
+    }
+}
+
+
+

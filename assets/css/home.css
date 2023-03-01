@@ -37,7 +37,7 @@ hr {
 /* Header */
 
 header {
-   background-image: url("assets/img/Home.jpg");
+   background-image: url("/assets/img/Home.jpg");
    background-size:cover;
    background-repeat: no-repeat;
    background-position: 30%;
@@ -996,6 +996,18 @@ header {
 
     .book__btn {
         font-size: 0.7rem;
+    }
+
+    .cart {
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 10px;
+        border-radius: 100%;
+    } 
+
+    .quantityCart {
+        bottom: 60px;
+        right: 10px;
     }
 
     .footer {

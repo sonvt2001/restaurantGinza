@@ -7,11 +7,9 @@
     <title>Our story</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="ourstory.css">
-    <link rel="stylesheet" href="review.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+    <link rel="stylesheet" href="/assets/css/ourstory.css">
 </head>
 <body>
     <header>
@@ -38,77 +36,36 @@
                 </li>
                 <li id="home" class="nav__list--item ">Home</li>
                 <li id="menu" class="nav__list--item ">Menu</li>
-                <li id="story" class="nav__list--item  ">Our story</li>
+                <li id="story" class="nav__list--item active ">Our story</li>
                 <li id="review" class="nav__list--item ">Reviews</li>
-                <li id="contact" class="nav__list--item active">Contact</li>
+                <li id="contact" class="nav__list--item">Contact</li>
                 <div class="line"></div>
             </ul>
         </div>
         <h1 class="name__restaurant">Ginza</h1>
-        <h1 class="name__menu">Contacts </h1>
+        <h1 class="name__menu">About</h1>
     </header>
 
-    <div class="container">
-        <div class="row contact">
-            <div class="col-xl-6 reservation">
-                <div class="reservation__title">
-                    Make a reservation
-                </div>
-                <form class="col-xl-10 form__reservation">
-                    <div class="form__group">
-                        <div class="form__label">
-                            <label for="name">Name</label>
-                        </div>
-                        <div class="form__input">
-                            <input type="text" name="name" id="name" placeholder="Your name">
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <div class="form__label">
-                            <label for="lastname">Last name</label>
-                        </div>
-                        <div class="form__input">
-                            <input type="text" name="lastname" id="lastname" placeholder="Last name">
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <div class="form__label">
-                            <label for="email">Your email</label>
-                        </div>
-                        <div class="form__input">
-                            <input type="text" name="email" id="email" placeholder="Your email address">
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <div class="form__label">
-                            <label for="phone">Phone</label>
-                        </div>
-                        <div class="form__input">
-                            <input type="text" name="phone" id="phone" placeholder="Your phone number">
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <div class="form__label">
-                            <label for="name">Message</label>
-                        </div>
-                        <div class="form__textarea">
-                           <textarea name="message" id="message" cols="50" rows="2" placeholder="Enter your message"></textarea>
-                        </div>
-                    </div>
-                </form>
-                <div class="form__submit">
-                    <button>Submit</button>
-                </div>
-            </div>
-            <div class="reservation__img col-xl-4">
-                <img src="./assets/img/contact1.jpg" alt="Reservation Image">
-            </div>
+    <div class="row container ourstory">
+        <div class="col-xl-4 col-md-12 col-sm-12 ourstory__img">
+            <img src="assets/img/ourstory1.jpg" alt="OurStory Image">
+        </div>
+        <div class="col-xl-6 col-md-12 col-sm-12 ourstory__groupText">
+            <div class="ourstory__title">How Ginza came to be</div>
+            <div class="ourstory__text">Ginza had an unconventional start as a restaurant. Originally opening as a pop-up event, our original aim was to showcase the unique culinary stylings of our head chef, Kabu Natsu. </div>
         </div>
     </div>
+
+    <div class="row container ourstory2">
+        <div class="col-xl-6 col-md-12 col-sm-12 ourstory2__groupText">
+            <div class="ourstory2__text1">When it became clear that there was going to be continued interest in the eating experience we’d curated, we found a permanent location, expanded our menu, and began regular service. That was 5 years ago, and we’re still going strong today.</div>
+            <div class="ourstory2__text2">Though we’ve come a long way from where we started (we’re up to 12 chefs and 10 servers on a normal evening), our focus has ever shifted. When you eat with us, you can expect to find new flavors, existing foods, and a sparkling evening.</div>
+        </div>
+        <div class="col-xl-6 col-md-12 col-sm-12 ourstory2__img">
+            <img src="assets/img/ourstory2.jpg" alt="OurStory Image">
+        </div>
+    </div>
+
 
     <div class="container-fluid book__table">
         <div class="book__title">Book a table</div>
@@ -169,31 +126,33 @@
     </div>
     <span class="quantityCart">0</span>
 
-    <script src="home.js"></script>
-    <script src="form.js"></script>
-    <script src="product.js"></script>
-    <script src="cart.js"></script>
+    <script src="/assets/js/home.js"></script>
+    <script src="/assets/js/form.js"></script>
+    <script src="/assets/js/product.js"></script>
+    <script src="/assets/js/cart.js"></script>
 
     <script>
         document.getElementById('home').onclick = function() {
             setTimeout(function() {
-                window.location.href = "index.html";
+                window.location.href = "/index.html";
             },500)
         }
         document.getElementById('menu').onclick = function() {
             setTimeout(function() {
-                window.location.href = "menu.html";
-            },500)
-        }
-        document.getElementById('story').onclick = function() {
-            setTimeout(function() {
-                window.location.href = "ourstory.html";
+                window.location.href = "/view/menu.html";
             },500)
         }
         document.getElementById('review').onclick = function() {
             setTimeout(function() {
-                window.location.href = "review.html";
+                window.location.href = "/view/review.html";
+            },500)
+        }
+        document.getElementById('contact').onclick = function() {
+            setTimeout(function() {
+                window.location.href = "/view/contact.html";
             },500)
         }
         showUserName()
     </script>
+</body>
+</html>

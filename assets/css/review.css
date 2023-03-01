@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url("assets/img/review.jpg");
+    background-image: url("/assets/img/review.jpg");
    background-size:cover;
    background-repeat: no-repeat;
    background-position: 30%;
@@ -39,4 +39,31 @@ header {
 .review__img > img {
     width: 550px;
     margin: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 739px) {
+    .name__restaurant,
+    .name__menu {
+        font-size: 2rem;
+    }
+
+    .reviews {
+        padding: 0;
+    }
+
+    .review__title {
+        font-size: 2rem;
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .person {
+        font-size: 1rem
+    }
+
+    .review__img > img {
+        width: 100%;
+    }
 }

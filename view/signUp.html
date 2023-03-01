@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="toastMessage.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="/assets/css/form.css">
+    <link rel="stylesheet" href="/assets/css/toastMessage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -14,10 +14,16 @@
         <div id="toast"></div>
         <div class="form">
             <header>
-                <button onclick="history.back()" class="back" href=""><i class="fa-solid fa-angle-left"></i></button>
-                <h2>Login</h2>
+                <button onclick="history.back()" class="back" id="goBack" href=""><i class="fa-solid fa-angle-left"></i></button>
+                <h2>Sign Up</h2>
             </header>
-            <form onsubmit="loginSubmit()" method="get" action="/index.html"  id="formLogin">
+            <form onsubmit="registerSubmit()" action="" method="post" id="formRegister" class="form__signUp">
+                <div class="form__group">
+                    <i class="form__icon fa-solid fa-circle-user"></i>
+                    <input oninput="checkLengthInput()" type="text" name="username" id="username" class="form__control" placeholder="UserName">
+                </div>
+                <span class="form__message"></span>
+    
                 <div class="form__group">
                     <i class="form__icon fa-solid fa-envelope"></i>
                     <input oninput="checkLengthInput()" type="email" name="email" id="email" class="form__control" placeholder="Email">
@@ -33,46 +39,29 @@
                 <span class="form__message"></span>
                 <section>
                     <button type="submit" id="btn__submit" class="form__submit">
-                        LOGIN
+                        CREATE ACCOUNT
                     </button>
                 </section>
             </form>
-            
-    
-            <hr width="250px" color="#fff" />
-            <div class="other">
-                <button class="btn btn__forgot">Forgot Password?</button>
-                <button onclick="register()" id="btnRegister" class="btn btn__signIn">Register</button>
-            </div>
-    
         </div>
     </div>
 
 
-    <script src="toastMessage.js"></script>
-    <script src="home.js"></script>
-    <script src="form.js"></script>
+    <script src="/assets/js/form.js"></script>
+    <script src="/assets/js/toastMessage.js"></script>
     <script>
-        function toastLogin() {
+        function toastSuccess() {
             toast({
-                title: "Success!",
-                msg: "Login...",
+                title: "Success",
+                msg: "Go to login page in 3 seconds",
                 type: "success",
             })
         }
 
-       function toastWarn() { 
-            toast({
-                title: "Warning",
-                msg: "User not found!",
-                type: "warn",
-            })
-        }
-
-        function toastCheckInfoLogin() { 
+        function toastError() { 
             toast({
                 title: "Failure",
-                msg: "Wrong account or password!",
+                msg: "Please fill in this form!",
                 type: "error",
             })
         }

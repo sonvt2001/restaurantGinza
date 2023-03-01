@@ -8,19 +8,19 @@ const iconMenu = document.getElementById('iconMenu');
 
 function loginAccount() {
     setTimeout(function () {
-        window.location.href = "signIn.html"
+        window.location.href = "/view/signIn.html"
     },500)
 }
 
 function switchMenuPage() {
     setTimeout(function () {
-        window.location.href = "menu.html"
+        window.location.href = "/view/menu.html"
     },500)
 }
 
 function shopCart() {
     setTimeout(function () {
-        window.location.href = "cart.html"
+        window.location.href = "/view/cart.html"
     },500)
 }
 

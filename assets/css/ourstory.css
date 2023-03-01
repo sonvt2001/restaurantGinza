@@ -1,5 +1,5 @@
 header {
-    background-image: url("assets/img/ourstory.jpg");
+    background-image: url("/assets/img/ourstory.jpg");
    background-size:cover;
    background-repeat: no-repeat;
    background-position: 30%;
@@ -70,3 +70,41 @@ body {
 .ourstory2__text2 {
     font-size: 1.2rem;
 }
+
+/* Responsive */
+
+@media (max-width: 739px) {
+    
+    .ourstory,
+    .ourstory2 {
+        display: flex;
+        padding: 50px 20px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .ourstory2 {
+        padding-top: 10px;
+    }
+
+    .ourstory__img > img { 
+        width: 100%;
+    }
+
+    .ourstory2__img > img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .ourstory__title {
+        max-width: none;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+}
+
+

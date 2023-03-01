@@ -106,7 +106,7 @@ function loginSubmit (e) {
     else if( userFromString.email == email && userFromString.password == password) {
         toastLogin()
         setTimeout(function(){
-            window.location.href = "index.html"
+            window.location.href = "/index.html"
         },2000)
     }
     else{

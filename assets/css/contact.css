@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url("assets/img/contact.jpg");
+    background-image: url("/assets/img/contact.jpg");
    background-size:cover;
    background-repeat: no-repeat;
    background-position: 30%;
@@ -66,4 +66,21 @@ header {
 .form__submit > button:hover {
     border-color : #000;
     color: #000;
+}
+
+/* Responsive */
+
+@media (max-width: 739px) {
+    .contact {
+        padding: 0;
+    }
+
+    .reservation__title {
+        font-size: 2.2rem;
+        padding-top: 40px;
+    }
+
+    .reservation__img > img {
+        width: 100%;
+    }
 }

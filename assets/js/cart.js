@@ -11,7 +11,7 @@ let products = [
         name: "Dumplings",
         price : 8,
         desc: "Choose from vegetable, chicken or pork filling. Served with dipping sauce and garnish.",
-        path: "assets/img/starters1.jpg",
+        path: "/assets/img/starters1.jpg",
         inCart: 0,
         tag: "dumplings",
         totalPrice: 8
@@ -20,7 +20,7 @@ let products = [
         name: "Chef's Special",
         price : 8,
         desc: "Avocado, lime, salmon, mushrooms and garnish served with pickled ginger and spring onions.",
-        path: "assets/img/starters2.jpg",
+        path: "/assets/img/starters2.jpg",
         inCart: 0,
         tag: "chef'sSpecial",
         totalPrice: 8
@@ -30,7 +30,7 @@ let products = [
         name: "Vegetable Pho",
         price : 8,
         desc: "Ginza Pho is based on a family recipe that's been handed down for generations. It's a spicy, light and aromatic noodle soup.",
-        path: "assets/img/img-dishes1.jpg",
+        path: "/assets/img/img-dishes1.jpg",
         inCart: 0,
         tag:"vegetablePho",
         totalPrice: 8
@@ -39,7 +39,7 @@ let products = [
         name: "Tonkatsu Ramen",
         price : 7,
         desc: "Our bespoke ramen comes with handmade noodles, a wide array of toppings to choose from and homemade broth.",
-        path: "assets/img/img-dishes2.jpg",
+        path: "/assets/img/img-dishes2.jpg",
         inCart: 0,
         tag:"tonkatsuRamen",
         totalPrice: 7
@@ -48,7 +48,7 @@ let products = [
         name: "Teriyaki Donburi",
         price: 10,
         desc: "A crown pleaser, our homemade teriyaki sauce served with chicken or tofu and greens.",
-        path: "assets/img/bowls2.jpg",
+        path: "/assets/img/bowls2.jpg",
         inCart: 0,
         tag: "teriyakiDonburi",
         totalPrice: 10
@@ -57,7 +57,7 @@ let products = [
         name: "Vermicelli Donburi",
         price: 9,
         desc: "Modern fusion dish combining rice noodles with a classic rice bowl. Vegetarian option available.",
-        path: "assets/img/bowls1.jpg",
+        path: "/assets/img/bowls1.jpg",
         inCart: 0,
         tag:"vermicelliDonburi",
         totalPrice: 9
@@ -66,7 +66,7 @@ let products = [
         name: "Philadelphia Roll",
         price : 8,
         desc: "A modern classic. Sushi roll with salmon, avocado, cream cheese, and surimi sticks.",
-        path: "assets/img/sushi1.jpg",
+        path: "/assets/img/sushi1.jpg",
         inCart: 0,
         tag:"philadelphiaRoll",
         totalPrice: 8
@@ -75,7 +75,7 @@ let products = [
         name: "San Francisco Roll",
         price : 7,
         desc: "Inside out roll with surimi, tuna, cream cheese, sesame seeds and fried onions.",
-        path: "assets/img/sushi2.jpg",
+        path: "/assets/img/sushi2.jpg",
         inCart: 0,
         tag:"sanFranciscoRoll",
         totalPrice: 7
@@ -84,7 +84,7 @@ let products = [
         name: "Dragon Roll",
         price : 9,
         desc: "Inside out roll with fried king prawns, avocado, Japanese omelet and cream cheese.",
-        path: "assets/img/sushi3.jpg",
+        path: "/assets/img/sushi3.jpg",
         inCart: 0,
         tag:"dragonRoll",
         totalPrice: 9
@@ -93,7 +93,7 @@ let products = [
         name: "Nigiri Plate",
         price : 15,
         desc: "A selection of our finest nigiri: choose from salmon, tuna, tilapia, surimi, prawns and vegetarian options.",
-        path: "assets/img/sushi4.jpg",
+        path: "/assets/img/sushi4.jpg",
         inCart: 0,
         tag:"nigiriPlate",
         totalPrice: 15
@@ -102,7 +102,7 @@ let products = [
         name: "Sapporo Beer",
         price : 8.50,
         desc: "Premium Japanese beer.",
-        path: "assets/img/drink1.jpg",
+        path: "/assets/img/drink1.jpg",
         inCart: 0,
         tag:"sapporoBeer",
         totalPrice: 8.50
@@ -111,7 +111,7 @@ let products = [
         name: "Kokuryu Sake",
         price : 8.50,
         desc: "Daidinjo sake with a mild aroma and subtle floral notes.",
-        path: "assets/img/drink2.jpg",
+        path: "/assets/img/drink2.jpg",
         inCart: 0,
         tag: "kokuryuSake",
         totalPrice: 8.50
@@ -120,7 +120,7 @@ let products = [
         name: "Tozai Sake",
         price : 31.50,
         desc: "Smooth, fruity, and cloudy sake, perfect for pairing.",
-        path: "assets/img/drink3.jpg",
+        path: "/assets/img/drink3.jpg",
         inCart: 0,
         tag: "tozaiSake",
         totalPrice: 31.50
@@ -129,7 +129,7 @@ let products = [
         name: "Juyodai Sake",
         price : 35.50,
         desc: "An easy-drinking premium sake with a rich flavor.",
-        path: "assets/img/drink4.jpg",
+        path: "/assets/img/drink4.jpg",
         inCart: 0,
         tag: "juyodaiSake",
         totalPrice: 35.50
@@ -155,10 +155,13 @@ function loadNumberCart() {
         else if ( productNumbers < 1) {
             verbItem.textContent = ' item in cart.'
             productContainer.innerHTML += `
-            <div class="img__emtyCart">
-                <img class="col-xl-12" src="./assets/img/cartemty.png" alt="Image Cart is Empty" />
+            <div class="img__emtyCart col-sm-12 col-md-12">
+                <img class="col-xl-12" src="/assets/img/cartemty.png" alt="Image Cart is Empty" />
             </div>
         `
+        
+        document.querySelector('.btnOrder').classList.add("disabled");
+
         }
     }
 }
@@ -232,15 +235,16 @@ function renderItemCartInBag() {
     if(getItem && productContainer) {
         Object.values(getItem).map( item => {
             productContainer.innerHTML += `
-            <div class="thumails row">
-                    <div class="col-xl-3 img__product">
+            <div class="thumails">
+                    <div class="col-xl-3 col-sm-1 col-md-1 img__product">
                         <img src="${item.path}" alt="">
+                        <div class="name__product--mobile">${item.name}</div>
                     </div>
-                    <div class="col-xl-4 group__info">
+                    <div class="col-xl-4 col-sm-3 col-md-3 group__info">
                         <div class="name__product">${item.name}</div>
                         <div class="price__product">$${item.price}</div> 
                     </div>
-                    <div class="col-xl-1 quality">
+                    <div class="col-xl-1 col-sm-1 col-md-1 quality">
                         <i class="plusItem fa-solid fa-plus"></i>
                         <span class="quantity">${item.inCart}</span>
                         <i class="minusItem fa-solid fa-minus"></i>
@@ -258,7 +262,7 @@ function renderItemCartInBag() {
     else {
         productContainer.innerHTML += `
             <div class="img__emtyCart">
-                <img class="col-xl-12" src="./assets/img/cartemty.png" alt="Image Cart is Empty" />
+                <img class="col-xl-12" src="/assets/img/cartemty.png" alt="Image Cart is Empty" />
             </div>
         `
     }
@@ -396,6 +400,6 @@ function changQuantity(){
 changQuantity()
 
 function pageBill() {
-    location.href ="bills.html";
+    location.href ="/view/bills.html";
 }
 

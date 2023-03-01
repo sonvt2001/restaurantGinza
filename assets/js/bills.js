@@ -13,7 +13,7 @@ var getItems = Object.values(getProductByUser)
 let getTotalAllPrice = localStorage.getItem('totalPrice');
 getTotalAllPrice = JSON.parse(getTotalAllPrice)
 
-let randomCostShip = Math.floor(Math.random() * 30)
+let randomCostShip = Math.floor(Math.random() * 10)
 
 let sumPriceBill = getTotalAllPrice + randomCostShip;
 
@@ -29,9 +29,10 @@ function renderUser() {
 
    getItems.map( (item) => {
       productByUser.innerHTML += `
-               <div  class="thumails row">
+               <div  class="thumails">
                   <div class="col-xl-2 img__product">
                         <img src="${item.path}" alt="">
+                        <div class="name__product--mobile">${item.name}</div>
                   </div>
                   <div class="col-xl-4 group__info">
                         <div class="name__product">${item.name}</div>
@@ -112,7 +113,7 @@ function paymentBill() {
 }
 
 function backHome() {
-     location.href = "./index.html";
+     location.href = "/index.html";
      localStorage.removeItem("productInCart");
      localStorage.removeItem("totalPrice");
      localStorage.removeItem("cartNumbers");
