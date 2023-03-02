@@ -83,4 +83,8 @@ header {
     .reservation__img > img {
         width: 100%;
     }
+
+    .form__label > label {
+        font-size: 1rem;
+    }
 }
