@@ -283,6 +283,7 @@ inCartQuantity = JSON.parse(inCartQuantity);
 let getPrice = localStorage.getItem("totalPrice");
 getPrice = JSON.parse(getPrice);
 
+
 let getCartNumber = localStorage.getItem("cartNumbers");
 getCartNumber = JSON.parse(getCartNumber);
 
@@ -360,8 +361,7 @@ function removeItemInCart() {
                         if ( index2 === index ) {
                             if ( item2.tag == item.tag ) {
                                 delete inCartQuantity[item2.tag]
-                                 console.log(true);
-                                 totalPriceMinus(item2)
+                                 totalPriceRemove(item2)
                                  totalCartNumber()
                                 //  location.reload();
                             }
@@ -384,6 +384,11 @@ function totalPricePlus(quantity) {
 
 function totalPriceMinus(quantity1) {
     localStorage.setItem("totalPrice", Math.abs(quantity1.price - getPrice));
+    location.reload();
+}
+
+function totalPriceRemove(item) {
+    localStorage.setItem("totalPrice", Math.abs(item.totalPrice - getPrice));
     location.reload();
 }
 

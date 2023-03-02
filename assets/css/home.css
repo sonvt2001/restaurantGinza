@@ -734,7 +734,7 @@ header {
 
 @media (max-width: 739px) {
     header {
-        background-image: url("assets/img/Home.jpg");
+        background-image: url("/assets/img/Home.jpg");
         height: 50vh;
         width: 100%;
      }
@@ -1000,14 +1000,14 @@ header {
 
     .cart {
         font-size: 1.2rem;
-        bottom: 20px;
-        right: 10px;
+        bottom: 30px;
+        right: 20px;
         border-radius: 100%;
     } 
 
     .quantityCart {
-        bottom: 60px;
-        right: 10px;
+        bottom: 68px;
+        right: 15px;
     }
 
     .footer {

@@ -96,7 +96,7 @@ function paymentBill() {
                         border-radius: 10px;
             ">
                   <h1 style="color: #fff;">
-                        Successful payment!
+                        Successful!
                   </h1>
                   <button class="btnBackHome" onclick="backHome()"
                   style="padding: 10px;
